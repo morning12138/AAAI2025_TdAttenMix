@@ -2,6 +2,7 @@
 This repository includes the official project for the paper: TdAttenMix: Top-Down Attention Guided Mixup, AAAI 2025
 
 ## Update
+12/14/2025 Upload code
 12/14/2025 Update the README
 
 ## Getting Started
@@ -30,7 +31,7 @@ ImageNet
 ```
 Suppose you're using 8 GPUs for training, then simply run:
 ```shell
-python -m torch.distributed.launch --nproc_per_node=8 --master_port 29533 --use_env main.py --dist-eval  --data-path ../datasets/imagenet/ --model vit_deit_small_patch16_224 --output_dir ./log/deit_small_smmix --batch-size 1024
+python -m torch.distributed.launch --nproc_per_node=8 --master_port 29533 --use_env main.py --dist-eval  --data-path ../datasets/imagenet/ --model vit_deit_small_patch16_224 --output_dir ./log/deit_small_tdattenmix --batch-size 1024
 ```
 
 To evaluate your model trained with TransMix, please refer to [timm](https://github.com/rwightman/pytorch-image-models#train-validation-inference-scripts).
